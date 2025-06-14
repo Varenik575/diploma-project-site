@@ -1,0 +1,11 @@
+.navList {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header {
+    background-color: #E3D8F1;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
