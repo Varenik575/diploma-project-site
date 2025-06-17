@@ -12,6 +12,11 @@ const OrderForm = () => {
     fax: "",
     house_number: "",
     street: "",
+    city: "",
+    country: "",
+    postal_index: "",
+    delivery_specifics: "",
+    shape: "",
   };
 
   const clientId = useId();
@@ -34,35 +39,35 @@ const OrderForm = () => {
   return (
     <Formik initialValues={INITIAL_VALUES} onSubmit={handleSubmit}>
       <Form className={s.form}>
-<div name="contactSection" className={s.formSection}>
-    <span>Контакт:</span>
-        <div>
-          <label htmlFor="client">Замовник:</label>
-          <Field type="text" name="client" id={clientId} />
-        </div>
+        <div name="contactSection" className={s.formSection}>
+          <span>Контакт:</span>
+          <div>
+            <label htmlFor="client">Замовник:</label>
+            <Field type="text" name="client" id={clientId} />
+          </div>
 
-        <div>
-          <label htmlFor="name">Контактна особа:</label>
-          <Field type="text" name="name" id={nameId} />
-        </div>
+          <div>
+            <label htmlFor="name">Контактна особа:</label>
+            <Field type="text" name="name" id={nameId} />
+          </div>
 
-        <div>
-          <label htmlFor="number">Телефон:</label>
-          <Field type="text" name="number" id={numberId} />
-        </div>
+          <div>
+            <label htmlFor="number">Телефон:</label>
+            <Field type="text" name="number" id={numberId} />
+          </div>
 
-        <div>
-          <label htmlFor="email">Електронна пошта:</label>
-          <Field type="email" name="email" id={emailId} />
-        </div>
+          <div>
+            <label htmlFor="email">Електронна пошта:</label>
+            <Field type="email" name="email" id={emailId} />
+          </div>
 
-        <div>
-          <label htmlFor="fax">Факс:</label>
-          <Field type="text" name="fax" id={faxId} />
+          <div>
+            <label htmlFor="fax">Факс:</label>
+            <Field type="text" name="fax" id={faxId} />
+          </div>
         </div>
-</div>
-        <div name="addressSection" className={s.formSection} >
-            <span>Адреса:</span>
+        <div name="addressSection" className={s.formSection}>
+          <span>Адреса:</span>
           <div>
             <label htmlFor="house_number">Номер дому:</label>
             <Field type="text" name="house_number" id={houseId} />
@@ -93,7 +98,11 @@ const OrderForm = () => {
             <Field as="textarea" name="delivery_specifics" id={deliveryId} />
           </div>
         </div>
-
+        <div name="orderSection" className={s.formSection}>
+          <Field type="checkbox" name="shape" value="one" />
+          <Field type="checkbox" name="shape" value="two" />
+          <Field type="checkbox" name="shape" value="three" />
+        </div>
         <button type="submit">Залишити замовлення</button>
       </Form>
     </Formik>
