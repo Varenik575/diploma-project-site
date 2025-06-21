@@ -17,6 +17,17 @@ const OrderForm = () => {
     postal_index: "",
     delivery_specifics: "",
     shape: "",
+    width: "",
+    length: "",
+    useful_width: "",
+    useful_length: "",
+    useful_height: "",
+    film_thickness: "",
+    logo_info: "",
+    corners: "",
+    euroloop: "",
+    corex_color: "",
+    quantity: "",
   };
 
   const clientId = useId();
@@ -24,12 +35,27 @@ const OrderForm = () => {
   const numberId = useId();
   const emailId = useId();
   const faxId = useId();
+
   const houseId = useId();
   const streetId = useId();
   const cityId = useId();
   const countryId = useId();
   const postalId = useId();
   const deliveryId = useId();
+
+  const shapeId = useId();
+  const widthId = useId();
+  const lengthId = useId();
+  const usefulWidthId = useId();
+  const usefulLengthId = useId();
+  const usefulHeightId = useId();
+  const filmThicknessId = useId();
+
+  const logoInfoId = useId();
+  const cornersId = useId();
+  const euroloopId = useId();
+  const colorId = useId();
+  const quantityId = useId();
 
   const handleSubmit = (values, actions) => {
     console.log(values);
@@ -98,11 +124,181 @@ const OrderForm = () => {
             <Field as="textarea" name="delivery_specifics" id={deliveryId} />
           </div>
         </div>
+
         <div name="orderSection" className={s.formSection}>
-          <Field type="checkbox" name="shape" value="one" />
-          <Field type="checkbox" name="shape" value="two" />
-          <Field type="checkbox" name="shape" value="three" />
+          <div>
+            <label htmlFor="shape">
+              Розрахунок вартості блістерної упаковки без загинання:
+            </label>
+            <Field type="radio" name="shape" value="uncurled" id={shapeId} />
+            <img
+              src="src/assets/order_blister_no_curl.jpg"
+              alt=""
+              width="300"
+              height="190"
+            />
+          </div>
+          <div>
+            <label htmlFor="shape">
+              Розрахунок вартості блістерної упаковки із загинанням (типу
+              «пенал»):
+            </label>
+            <Field type="radio" name="shape" value="curled" id={shapeId} />
+            <img
+              src="src/assets/order_blister_curl.jpg"
+              alt=""
+              width="300"
+              height="183"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="shape">
+              Розрахунок вартості блістерної упаковки – корекc:
+            </label>
+            <Field type="radio" name="shape" value="corex" id={shapeId} />
+            <img src="src/assets/order_blister_correcs.jpg" alt="" />
+          </div>
+
+          <div>
+            <div>
+              <label htmlFor="width">1. Ширина блістера (A), мм</label>
+              <Field type="number" name="width" id={widthId} />
+            </div>
+
+            <div>
+              <label htmlFor="length">2. Довжина блістера (B), мм</label>
+              <Field type="number" name="length" id={lengthId} />
+            </div>
+
+            <div>
+              <label htmlFor="useful_width">
+                3. Ширина корисної частини (a), мм
+              </label>
+              <Field type="number" name="useful_width" id={usefulWidthId} />
+            </div>
+
+            <div>
+              <label htmlFor="useful_length">
+                4. Довжина корисної частини (b), мм
+              </label>
+              <Field type="number" name="useful_length" id={usefulLengthId} />
+            </div>
+
+            <div>
+              <label htmlFor="useful_height">
+                5. Висота корисної частини (c), мм
+              </label>
+              <Field type="number" name="useful_height" id={usefulHeightId} />
+            </div>
+
+            <div>
+              <label htmlFor="film_thickness">
+                6. Товщина плівки (-), мм (0.20 – 1.00 мм)
+              </label>
+              <Field
+                type="number"
+                name="film_thickness"
+                min="0.20"
+                max="1"
+                id={filmThicknessId}
+              />
+            </div>
+            <span>Інші умови:</span>
+            <div>
+              <label htmlFor="logo_info">1. Логотип на блістері: </label>
+              <label htmlFor="logo_info">
+                з логотипом
+                <Field
+                  type="radio"
+                  name="logo_info"
+                  value="yes"
+                  id={logoInfoId}
+                />
+              </label>
+              <label htmlFor="logo_info">
+                без логотипу
+                <Field
+                  type="radio"
+                  name="logo_info"
+                  value="no"
+                  id={logoInfoId}
+                />
+              </label>
+            </div>
+
+            <div>
+              <label htmlFor="corners">2. Краї блістера: </label>
+              <label htmlFor="corners">
+                округлені
+                <Field
+                  type="radio"
+                  name="corners"
+                  value="rounded"
+                  id={cornersId}
+                />
+              </label>
+              <label htmlFor="corners">
+                прямі
+                <Field
+                  type="radio"
+                  name="corners"
+                  value="straight"
+                  id={cornersId}
+                />
+              </label>
+            </div>
+
+            <div>
+              <label htmlFor="euroloop">3. Просічення "Європетля":</label>
+              <label htmlFor="euroloop">
+                Є
+                <Field
+                  type="radio"
+                  name="euroloop"
+                  value="yes"
+                  id={euroloopId}
+                />
+              </label>
+              <label htmlFor="euroloop">
+                Ні
+                <Field
+                  type="radio"
+                  name="euroloop"
+                  value="no"
+                  id={euroloopId}
+                />
+              </label>
+            </div>
+
+            <div>
+              <label htmlFor="corex_color">4. Колір корексу :</label>
+              <label htmlFor="corex_color">
+                Прозорий
+                <Field
+                  type="radio"
+                  name="corex_color"
+                  value="clear"
+                  id={colorId}
+                />
+              </label>
+              <label htmlFor="corex_color">
+                <Field
+                  type="radio"
+                  name="corex_color"
+                  value="colored"
+                  id={colorId}
+                />
+              </label>
+            </div>
+
+            <div>
+              <label htmlFor="quantity">5. Кількість, шт</label>
+              <Field type="number" name="quantity" id={quantityId} />
+            </div>
+          </div>
         </div>
+
         <button type="submit">Залишити замовлення</button>
       </Form>
     </Formik>
@@ -110,3 +306,14 @@ const OrderForm = () => {
 };
 
 export default OrderForm;
+
+//
+//
+//
+//1. Просічення "Європетля":   	Є Ні
+//1. Колір корексу : 	Прозорий Кольоровий
+//
+
+// Інші умови:
+
+// 3. Кількість
