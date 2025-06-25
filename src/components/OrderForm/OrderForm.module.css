@@ -23,6 +23,11 @@
     width: 400px;
 }
 
+.image {
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
 .formButton {
 width: 200px;
 padding-top: 8px;
@@ -35,3 +40,4 @@ border: 0;
 .formButton:hover {
     background-color: rgb(167, 126, 206);
 }
+

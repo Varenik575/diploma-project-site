@@ -182,7 +182,7 @@ const OrderForm = () => {
               Розрахунок вартості блістерної упаковки без загинання:
             </label>
             <Field type="radio" name="shape" value="uncurled" id={shapeId} />
-            <img
+            <img className={s.image}
               src="src/assets/order_blister_no_curl.jpg"
               alt="Картинка - креслення пакування типу 'під запайку'"
               width="300"
@@ -195,7 +195,7 @@ const OrderForm = () => {
               «пенал»):
             </label>
             <Field type="radio" name="shape" value="curled" id={shapeId} />
-            <img
+            <img className={s.image}
               src="src/assets/order_blister_curl.jpg"
               alt="Картинка - креслення пакування типу 'пенал'"
               width="300"
@@ -208,7 +208,7 @@ const OrderForm = () => {
               Розрахунок вартості блістерної упаковки – корекc:
             </label>
             <Field type="radio" name="shape" value="corex" id={shapeId} />
-            <img
+            <img className={s.image}
               width="300"
               height="190"
               src="src/assets/order-blister-correcs.jpg"
