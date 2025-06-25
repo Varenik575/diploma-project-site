@@ -116,32 +116,63 @@ const OrderForm = () => {
           <span>Адреса:</span>
           <div className={s.formElement}>
             <label htmlFor="house_number">Номер дому:</label>
-            <Field  className={s.formField} type="text" name="house_number" id={houseId} />
+            <Field
+              className={s.formField}
+              type="text"
+              name="house_number"
+              id={houseId}
+            />
           </div>
 
           <div className={s.formElement}>
             <label htmlFor="street">Вулиця:</label>
-            <Field className={s.formField} type="text" name="street" id={streetId} />
+            <Field
+              className={s.formField}
+              type="text"
+              name="street"
+              id={streetId}
+            />
           </div>
 
           <div className={s.formElement}>
             <label htmlFor="city">Місто або населений пункт:</label>
-            <Field className={s.formField} type="text" name="city" id={cityId} />
+            <Field
+              className={s.formField}
+              type="text"
+              name="city"
+              id={cityId}
+            />
           </div>
 
           <div className={s.formElement}>
             <label htmlFor="country">Країна</label>
-            <Field className={s.formField} type="text" name="country" id={countryId} />
+            <Field
+              className={s.formField}
+              type="text"
+              name="country"
+              id={countryId}
+            />
           </div>
 
           <div className={s.formElement}>
             <label htmlFor="postal_index">Поштовий індекс:</label>
-            <Field className={s.formField} type="text" name="postal_index" id={postalId} />
+            <Field
+              className={s.formField}
+              type="text"
+              name="postal_index"
+              id={postalId}
+            />
           </div>
 
           <div className={s.formElement}>
             <label htmlFor="delivery_specifics">Примітки щодо доставки:</label>
-            <Field className={s.formField} as="textarea" name="delivery_specifics" rows="7" id={deliveryId} />
+            <Field
+              className={s.formField}
+              as="textarea"
+              name="delivery_specifics"
+              rows="7"
+              id={deliveryId}
+            />
           </div>
         </fieldset>
 
@@ -153,7 +184,7 @@ const OrderForm = () => {
             <Field type="radio" name="shape" value="uncurled" id={shapeId} />
             <img
               src="src/assets/order_blister_no_curl.jpg"
-              alt=""
+              alt="Картинка - креслення пакування типу 'під запайку'"
               width="300"
               height="190"
             />
@@ -166,7 +197,7 @@ const OrderForm = () => {
             <Field type="radio" name="shape" value="curled" id={shapeId} />
             <img
               src="src/assets/order_blister_curl.jpg"
-              alt=""
+              alt="Картинка - креслення пакування типу 'пенал'"
               width="300"
               height="183"
             />
@@ -177,46 +208,77 @@ const OrderForm = () => {
               Розрахунок вартості блістерної упаковки – корекc:
             </label>
             <Field type="radio" name="shape" value="corex" id={shapeId} />
-            <img src="src/assets/order_blister_correcs.jpg" alt="" />
+            <img
+              width="300"
+              height="190"
+              src="src/assets/order_blister_correcs.jpg"
+              alt="Картинка - креслення пакування типу 'корекс'"
+            />
           </div>
 
           <div>
             <div className={s.formElement}>
               <label htmlFor="width">1. Ширина блістера (A), мм</label>
-              <Field className={s.formField} type="number" name="width" id={widthId} />
+              <Field
+                className={s.formField}
+                type="number"
+                name="width"
+                id={widthId}
+              />
             </div>
 
             <div className={s.formElement}>
               <label htmlFor="length">2. Довжина блістера (B), мм</label>
-              <Field  className={s.formField} type="number" name="length" id={lengthId} />
+              <Field
+                className={s.formField}
+                type="number"
+                name="length"
+                id={lengthId}
+              />
             </div>
 
             <div className={s.formElement}>
               <label htmlFor="useful_width">
                 3. Ширина корисної частини (a), мм
               </label>
-              <Field  className={s.formField} type="number" name="useful_width" id={usefulWidthId} />
+              <Field
+                className={s.formField}
+                type="number"
+                name="useful_width"
+                id={usefulWidthId}
+              />
             </div>
 
             <div className={s.formElement}>
               <label htmlFor="useful_length">
                 4. Довжина корисної частини (b), мм
               </label>
-              <Field className={s.formField} type="number" name="useful_length" id={usefulLengthId} />
+              <Field
+                className={s.formField}
+                type="number"
+                name="useful_length"
+                id={usefulLengthId}
+              />
             </div>
 
             <div className={s.formElement}>
               <label htmlFor="useful_height">
                 5. Висота корисної частини (c), мм
               </label>
-              <Field  className={s.formField} type="number" name="useful_height" id={usefulHeightId} />
+              <Field
+                className={s.formField}
+                type="number"
+                name="useful_height"
+                id={usefulHeightId}
+              />
             </div>
 
             <div className={s.formElement}>
               <label htmlFor="film_thickness">
                 6. Товщина плівки (-), мм (0.20 – 1.00 мм)
               </label>
-              <Field className={s.formField}
+              <Field
+                className={s.formField}
                 type="number"
                 name="film_thickness"
                 step="any"
@@ -237,7 +299,7 @@ const OrderForm = () => {
                   id={logoInfoId}
                 />
               </label>
-              <label htmlFor="logo_info" >
+              <label htmlFor="logo_info">
                 без логотипу
                 <Field
                   type="radio"
@@ -309,18 +371,26 @@ const OrderForm = () => {
                   name="corex_color"
                   value="colored"
                   id={colorId}
-                /> Кольоровий
+                />{" "}
+                Кольоровий
               </label>
             </div>
 
             <div className={s.formElement}>
               <label htmlFor="quantity">5. Кількість, шт</label>
-              <Field className={s.formField} type="number" name="quantity" id={quantityId} />
+              <Field
+                className={s.formField}
+                type="number"
+                name="quantity"
+                id={quantityId}
+              />
             </div>
           </div>
         </fieldset>
 
-        <button className={s.formButton} type="submit">Залишити замовлення</button>
+        <button className={s.formButton} type="submit">
+          Залишити замовлення
+        </button>
       </Form>
     </Formik>
   );
