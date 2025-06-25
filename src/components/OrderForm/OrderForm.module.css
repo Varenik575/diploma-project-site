@@ -5,5 +5,8 @@
 }
 
 .formSection {
-    border: 3px rgb(84, 77, 77) solid;
+    width: 600px;
+    border: 2px rgb(84, 77, 77) solid;
+    border-radius: 5px;
+    margin-bottom: 8px;
 } 

@@ -1,0 +1,15 @@
+.navList {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navItem {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+

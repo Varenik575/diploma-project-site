@@ -65,7 +65,7 @@ const OrderForm = () => {
   return (
     <Formik initialValues={INITIAL_VALUES} onSubmit={handleSubmit}>
       <Form className={s.form}>
-        <div name="contactSection" className={s.formSection}>
+        <fieldset name="contactSection" className={s.formSection}>
           <span>Контакт:</span>
           <div>
             <label htmlFor="client">Замовник:</label>
@@ -91,8 +91,8 @@ const OrderForm = () => {
             <label htmlFor="fax">Факс:</label>
             <Field type="text" name="fax" id={faxId} />
           </div>
-        </div>
-        <div name="addressSection" className={s.formSection}>
+        </fieldset>
+        <fieldset name="addressSection" className={s.formSection}>
           <span>Адреса:</span>
           <div>
             <label htmlFor="house_number">Номер дому:</label>
@@ -123,9 +123,9 @@ const OrderForm = () => {
             <label htmlFor="delivery_specifics">Примітки щодо доставки:</label>
             <Field as="textarea" name="delivery_specifics" id={deliveryId} />
           </div>
-        </div>
+        </fieldset>
 
-        <div name="orderSection" className={s.formSection}>
+        <fieldset name="orderSection" className={s.formSection}>
           <div>
             <label htmlFor="shape">
               Розрахунок вартості блістерної упаковки без загинання:
@@ -297,7 +297,7 @@ const OrderForm = () => {
               <Field type="number" name="quantity" id={quantityId} />
             </div>
           </div>
-        </div>
+        </fieldset>
 
         <button type="submit">Залишити замовлення</button>
       </Form>

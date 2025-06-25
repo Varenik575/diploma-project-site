@@ -1,0 +1,13 @@
+
+.navItem {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.navItem:hover {
+    background-color: rgb(167, 126, 206);
+}
