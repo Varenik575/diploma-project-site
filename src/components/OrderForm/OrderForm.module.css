@@ -10,3 +10,13 @@
     border-radius: 5px;
     margin-bottom: 8px;
 } 
+
+.formElement {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.formField {
+    width: 400px;
+}

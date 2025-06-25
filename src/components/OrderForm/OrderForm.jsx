@@ -67,61 +67,81 @@ const OrderForm = () => {
       <Form className={s.form}>
         <fieldset name="contactSection" className={s.formSection}>
           <span>Контакт:</span>
-          <div>
+          <div className={s.formElement}>
             <label htmlFor="client">Замовник:</label>
-            <Field type="text" name="client" id={clientId} />
+            <Field
+              className={s.formField}
+              type="text"
+              name="client"
+              id={clientId}
+            />
           </div>
 
-          <div>
+          <div className={s.formElement}>
             <label htmlFor="name">Контактна особа:</label>
-            <Field type="text" name="name" id={nameId} />
+            <Field
+              className={s.formField}
+              type="text"
+              name="name"
+              id={nameId}
+            />
           </div>
 
-          <div>
+          <div className={s.formElement}>
             <label htmlFor="number">Телефон:</label>
-            <Field type="text" name="number" id={numberId} />
+            <Field
+              className={s.formField}
+              type="text"
+              name="number"
+              id={numberId}
+            />
           </div>
 
-          <div>
+          <div className={s.formElement}>
             <label htmlFor="email">Електронна пошта:</label>
-            <Field type="email" name="email" id={emailId} />
+            <Field
+              className={s.formField}
+              type="email"
+              name="email"
+              id={emailId}
+            />
           </div>
 
-          <div>
+          <div className={s.formElement}>
             <label htmlFor="fax">Факс:</label>
-            <Field type="text" name="fax" id={faxId} />
+            <Field className={s.formField} type="text" name="fax" id={faxId} />
           </div>
         </fieldset>
         <fieldset name="addressSection" className={s.formSection}>
           <span>Адреса:</span>
-          <div>
+          <div className={s.formElement}>
             <label htmlFor="house_number">Номер дому:</label>
-            <Field type="text" name="house_number" id={houseId} />
+            <Field  className={s.formField} type="text" name="house_number" id={houseId} />
           </div>
 
-          <div>
+          <div className={s.formElement}>
             <label htmlFor="street">Вулиця:</label>
-            <Field type="text" name="street" id={streetId} />
+            <Field className={s.formField} type="text" name="street" id={streetId} />
           </div>
 
-          <div>
+          <div className={s.formElement}>
             <label htmlFor="city">Місто або населений пункт:</label>
-            <Field type="text" name="city" id={cityId} />
+            <Field className={s.formField} type="text" name="city" id={cityId} />
           </div>
 
-          <div>
+          <div className={s.formElement}>
             <label htmlFor="country">Країна</label>
-            <Field type="text" name="country" id={countryId} />
+            <Field className={s.formField} type="text" name="country" id={countryId} />
           </div>
 
-          <div>
+          <div className={s.formElement}>
             <label htmlFor="postal_index">Поштовий індекс:</label>
-            <Field type="text" name="postal_index" id={postalId} />
+            <Field className={s.formField} type="text" name="postal_index" id={postalId} />
           </div>
 
-          <div>
+          <div className={s.formElement}>
             <label htmlFor="delivery_specifics">Примітки щодо доставки:</label>
-            <Field as="textarea" name="delivery_specifics" id={deliveryId} />
+            <Field className={s.formField} as="textarea" name="delivery_specifics" rows="7" id={deliveryId} />
           </div>
         </fieldset>
 
