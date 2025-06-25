@@ -146,7 +146,7 @@ const OrderForm = () => {
         </fieldset>
 
         <fieldset name="orderSection" className={s.formSection}>
-          <div>
+          <div className={s.formElement}>
             <label htmlFor="shape">
               Розрахунок вартості блістерної упаковки без загинання:
             </label>
@@ -158,7 +158,7 @@ const OrderForm = () => {
               height="190"
             />
           </div>
-          <div>
+          <div className={s.formElement}>
             <label htmlFor="shape">
               Розрахунок вартості блістерної упаковки із загинанням (типу
               «пенал»):
@@ -172,7 +172,7 @@ const OrderForm = () => {
             />
           </div>
 
-          <div>
+          <div className={s.formElement}>
             <label htmlFor="shape">
               Розрахунок вартості блістерної упаковки – корекc:
             </label>
@@ -181,42 +181,42 @@ const OrderForm = () => {
           </div>
 
           <div>
-            <div>
+            <div className={s.formElement}>
               <label htmlFor="width">1. Ширина блістера (A), мм</label>
-              <Field type="number" name="width" id={widthId} />
+              <Field className={s.formField} type="number" name="width" id={widthId} />
             </div>
 
-            <div>
+            <div className={s.formElement}>
               <label htmlFor="length">2. Довжина блістера (B), мм</label>
-              <Field type="number" name="length" id={lengthId} />
+              <Field  className={s.formField} type="number" name="length" id={lengthId} />
             </div>
 
-            <div>
+            <div className={s.formElement}>
               <label htmlFor="useful_width">
                 3. Ширина корисної частини (a), мм
               </label>
-              <Field type="number" name="useful_width" id={usefulWidthId} />
+              <Field  className={s.formField} type="number" name="useful_width" id={usefulWidthId} />
             </div>
 
-            <div>
+            <div className={s.formElement}>
               <label htmlFor="useful_length">
                 4. Довжина корисної частини (b), мм
               </label>
-              <Field type="number" name="useful_length" id={usefulLengthId} />
+              <Field className={s.formField} type="number" name="useful_length" id={usefulLengthId} />
             </div>
 
-            <div>
+            <div className={s.formElement}>
               <label htmlFor="useful_height">
                 5. Висота корисної частини (c), мм
               </label>
-              <Field type="number" name="useful_height" id={usefulHeightId} />
+              <Field  className={s.formField} type="number" name="useful_height" id={usefulHeightId} />
             </div>
 
-            <div>
+            <div className={s.formElement}>
               <label htmlFor="film_thickness">
                 6. Товщина плівки (-), мм (0.20 – 1.00 мм)
               </label>
-              <Field
+              <Field className={s.formField}
                 type="number"
                 name="film_thickness"
                 min="0.20"
@@ -225,7 +225,7 @@ const OrderForm = () => {
               />
             </div>
             <span>Інші умови:</span>
-            <div>
+            <div className={s.formElement}>
               <label htmlFor="logo_info">1. Логотип на блістері: </label>
               <label htmlFor="logo_info">
                 з логотипом
@@ -236,7 +236,7 @@ const OrderForm = () => {
                   id={logoInfoId}
                 />
               </label>
-              <label htmlFor="logo_info">
+              <label htmlFor="logo_info" >
                 без логотипу
                 <Field
                   type="radio"
@@ -247,7 +247,7 @@ const OrderForm = () => {
               </label>
             </div>
 
-            <div>
+            <div className={s.formElement}>
               <label htmlFor="corners">2. Краї блістера: </label>
               <label htmlFor="corners">
                 округлені
@@ -269,7 +269,7 @@ const OrderForm = () => {
               </label>
             </div>
 
-            <div>
+            <div className={s.formElement}>
               <label htmlFor="euroloop">3. Просічення "Європетля":</label>
               <label htmlFor="euroloop">
                 Є
@@ -291,7 +291,7 @@ const OrderForm = () => {
               </label>
             </div>
 
-            <div>
+            <div className={s.formElement}>
               <label htmlFor="corex_color">4. Колір корексу :</label>
               <label htmlFor="corex_color">
                 Прозорий
@@ -308,13 +308,13 @@ const OrderForm = () => {
                   name="corex_color"
                   value="colored"
                   id={colorId}
-                />
+                /> Кольоровий
               </label>
             </div>
 
-            <div>
+            <div className={s.formElement}>
               <label htmlFor="quantity">5. Кількість, шт</label>
-              <Field type="number" name="quantity" id={quantityId} />
+              <Field className={s.formField} type="number" name="quantity" id={quantityId} />
             </div>
           </div>
         </fieldset>

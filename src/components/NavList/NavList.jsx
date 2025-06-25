@@ -1,4 +1,4 @@
-import s from "./Navlist.module.css";
+import s from "./NavList.module.css";
 import NavItem from "../NavItem/NavItem";
 
 function NavList({ items }) {
