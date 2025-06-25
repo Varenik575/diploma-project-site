@@ -219,7 +219,8 @@ const OrderForm = () => {
               <Field className={s.formField}
                 type="number"
                 name="film_thickness"
-                min="0.20"
+                step="any"
+                min="0.2"
                 max="1"
                 id={filmThicknessId}
               />
@@ -319,7 +320,7 @@ const OrderForm = () => {
           </div>
         </fieldset>
 
-        <button type="submit">Залишити замовлення</button>
+        <button className={s.formButton} type="submit">Залишити замовлення</button>
       </Form>
     </Formik>
   );

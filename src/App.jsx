@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header/Header";
 import OrderForm from "./components/OrderForm/OrderForm";
+import Footer from "./components/Footer/Footer";
 
 const DEFAULT_NAVLIST_ITEMS = [
   { id: "1", url: "url", text: "Головна" },
@@ -14,6 +15,7 @@ function App() {
     <>
       <Header items={DEFAULT_NAVLIST_ITEMS} />
       <OrderForm />
+      <Footer/>
     </>
   );
 }
