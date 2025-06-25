@@ -211,7 +211,7 @@ const OrderForm = () => {
             <img
               width="300"
               height="190"
-              src="src/assets/order_blister_correcs.jpg"
+              src="src/assets/order-blister-correcs.jpg"
               alt="Картинка - креслення пакування типу 'корекс'"
             />
           </div>
