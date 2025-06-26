@@ -1,0 +1,15 @@
+.list {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    justify-content: space-around;
+    height: 350px;
+}
+
+.listElement {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
